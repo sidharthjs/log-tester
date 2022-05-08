@@ -10,3 +10,7 @@ func main() {
 	fmt.Println("Hello")
 	log.Info("App started")
 }
+
+func Adder(a, b int) int {
+	return a + b
+}
