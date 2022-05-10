@@ -28,3 +28,9 @@ jobs:
       uses: golangci/golangci-lint-action@v3
       with:
         version: v1.45.2
+
+  ci:
+    - name: golangci-lint
+      uses: golangci/golangci-lint-action@v3
+      with:
+        version: v1.45.2
