@@ -1,4 +1,4 @@
-name: Go
+name: log-tester
 
 on:
   push:
@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: [ main ]
 
-name: log-tester
 jobs:
   build:
     runs-on: ubuntu-latest
