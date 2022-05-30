@@ -8,29 +8,29 @@ on:
 
 jobs:
 
-  - build:
-      runs-on: ubuntu-latest
-      steps:
-      - uses: actions/checkout@v3
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
 
-      - name: Set up Go
-        uses: actions/setup-go@v3
-        with:
-          go-version: 1.18
+    - name: Set up Go
+      uses: actions/setup-go@v3
+      with:
+        go-version: 1.18
 
-      - name: Build
-        run: go build -v ./...
+    - name: Build
+      run: go build -v ./...
 
-      - name: Test
-        run: go test -v ./...
+    - name: Test
+      run: go test -v ./...
 
-      - name: golangci-lint
-        uses: golangci/golangci-lint-action@v3
-        with:
-          version: v1.45.2
-
-  - ci:
     - name: golangci-lint
       uses: golangci/golangci-lint-action@v3
       with:
         version: v1.45.2
+
+  ci:
+  - name: golangci-lint
+    uses: golangci/golangci-lint-action@v3
+    with:
+      version: v1.45.2
